@@ -1,0 +1,79 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: black;
+}
+
+div h1{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(to right,
+  rgb(255,0,0),rgb(255,85,0),
+  rgb(255,153,0),rgb(255,251,0),
+  rgb(0,255,0),rgb(0,255,213),
+  rgb(0,238,255),rgb(0,140,255),
+  rgb(0,47,255),rgb(123,0,255),
+  rgb(212,0,255),rgb(255,0,238));
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 5s linear infinite;
+}
+
+@keyframes animate-gradient{
+  to{
+    background-position: 200%;
+  }
+}
+
+.box{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 90hv;
+}
+.box1{
+  border: 6px solid rgb(254, 2, 2);
+  width: 200px;
+  height: 70px;
+  position: fixed;
+  border-radius: 100px;
+  box-shadow: 0 0 50px red;
+}
+.box2{
+  border-top: 5px solid rgb(0,0,255);
+  border-bottom: 5px solid rgb(255, 0, 0);
+  border-right: 5px solid rgb(0,0,255) ;
+  border-left: 5px solid rgb(255, 0, 0);
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  margin-right: 120px;
+  animation: rotate 3s linear infinite;
+  transform: 2s;
+  position: fixed;
+}
+.box3{
+  border-top: 5px solid rgb(255,0,0);
+  border-bottom: 5px solid rgb(0, 0, 255);
+  border-right: 5px solid rgb(255,0,0) ;
+  border-left: 5px solid rgb(0, 0, 255);
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  margin-left: 120px;
+  animation: rotate 3s linear infinite;
+  transform: 2s;
+  position: fixed;
+}
+@keyframes rotate{
+  0%{
+    transform: scale(1) rotate(360deg);
+  }
+}
